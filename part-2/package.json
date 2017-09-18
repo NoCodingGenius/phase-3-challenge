@@ -1,0 +1,30 @@
+{
+  "name": "part-2",
+  "version": "1.0.0",
+  "description": "Command Line Grocery Store",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NoCodingGenius/phase-3-challenge.git"
+  },
+  "keywords": [
+    "Phase-3-Challenge",
+    "Part-2"
+  ],
+  "author": "LaToya Williams",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NoCodingGenius/phase-3-challenge/issues"
+  },
+  "homepage": "https://github.com/NoCodingGenius/phase-3-challenge#readme",
+  "dependencies": {
+    "node-print": "0.0.4"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "moch": "0.0.1"
+  }
+}
