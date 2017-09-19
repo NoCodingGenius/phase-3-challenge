@@ -8,4 +8,4 @@ INSERT INTO orders (shopper_id)
   VALUES ('1'), ('3'), ('5'), ('3'), ('4');
 
 INSERT INTO order_items (item_id, order_id)
-  VALUES ('2', '1'), ('4', '3'), ('6', '5'), ('2', '3'), ('8', '4');
+  VALUES ('2', '1'), ('4', '2'), ('6', '3'), ('2', '4'), ('8', '5');
