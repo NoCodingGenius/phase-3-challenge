@@ -4,6 +4,7 @@ const closeModal = document.getElementsByClassName('close-modal')[0];
 const clearModal = document.getElementsByClassName('clear-modal')[0];
 const divContent = document.getElementsByClassName('modal-item-name')[0];
 const div2Content = document.getElementsByClassName('modal-item-price')[0];
+const total = document.getElementsByClassName('total')[0];
 
 const addToCartButton = document.getElementsByClassName('add-to-cart');
 const cartItemCount = document.getElementById('cart-item-count');
@@ -38,20 +39,29 @@ function addToCart(addToCartButton) {
   for (var i = 0; i < cartItemPrices.length; i++) {
     div2Element.textContent = cartItemPrices[i];
     div2Content.appendChild(div2Element);
+
+    cartItemPrices[i] = cartItemPrices[i].replace(/\$/g, '');
   }
+
+  var dollarSignRemoved = cartItemPrices.map(Number);
+
+  function getSum(total, num) {
+    return total + num;
+  }
+  total.innerHTML = `Total: $${dollarSignRemoved.reduce(getSum)}`
 }
 
 //Cart Modal
-openModal.addEventListener('click', function () {
+openModal.addEventListener('click', function() {
   modal.style.display = 'block';
 })
 
-closeModal.addEventListener('click', function () {
+closeModal.addEventListener('click', function() {
   modal.style.display = 'none';
 })
 
 //Clear Cart
-clearModal.addEventListener('click', function () {
+clearModal.addEventListener('click', function() {
   while (divContent.firstChild && div2Content.firstChild) {
     divContent.firstChild.remove();
     div2Content.firstChild.remove();
@@ -60,4 +70,5 @@ clearModal.addEventListener('click', function () {
   cartItemCount.innerHTML = `(${itemCount})`;
   cartItemNames = [];
   cartItemPrices = [];
-})
+  total.innerHTML = `Total: $0.00`
+});
