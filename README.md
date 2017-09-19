@@ -19,12 +19,12 @@ Each requirement has a point value. A fully complete requirement gets full point
 
 ## General Requirements
 
-- [ ] __10:__ Solution is in a public repository called `phase-3-challenge`.
-- [ ] __10:__ Solution repository has 3 folders: `part-1`, `part-2`, and `part-3`.
-- [ ] __10:__ Solution repository inclu
+- [x] __10:__ Solution is in a public repository called `phase-3-challenge`.
+- [x] __10:__ Solution repository has 3 folders: `part-1`, `part-2`, and `part-3`.
+- [x] __10:__ Solution repository inclu
 a `.gitignore` ignoring files that don't shouldn't be committed (e.g. `node_modules/`, `*.log` files).
-- [ ] __10:__ Parts 1 and 2 have their own `package.json` specifying dependencies.
-- [ ] __20:__ Git history shows frequent commits.
+- [x] __10:__ Parts 1 and 2 have their own `package.json` specifying dependencies.
+- [x] __20:__ Git history shows frequent commits.
 
 ## Part 1: Simple web app
 
@@ -80,11 +80,11 @@ response content type: application/json
 
 ### Requirements
 
-- [ ] __10:__ All files are stored under the `part-1/` folder
-- [ ] __10:__ All dependencies are specified in a `package.json` file
-- [ ] __10:__ Web server can be started with `npm start` command
+- [x] __10:__ All files are stored under the `part-1/` folder
+- [x] __10:__ All dependencies are specified in a `package.json` file
+- [x] __10:__ Web server can be started with `npm start` command
 - [ ] __20:__ GET requests to the `/api/days/:day` route responds with  content type `text/plain`, as described in the example above
-- [ ] __80:__ POST requests to the `/api/array/concat`, concatenates the two arrays provided in the request body and responds with the result. An invalid array should return a 400 response.
+- [x] __80:__ POST requests to the `/api/array/concat`, concatenates the two arrays provided in the request body and responds with the result. An invalid array should return a 400 response.
 
 ## Part 2: Command Line Grocery Store
 
@@ -149,7 +149,7 @@ $ ./store real-shoppers
 - [x] __10:__ All files are stored under the `part-2/` folder
 - [x] __10:__ Database schema (all `CREATE TABLE` statements) is defined in a file `schema.sql`
 - [x] __10:__ SQL script to insert [grocery seed data][grocery-data] and load from CSV is created in a file `load-data.sql`
-- [ ] __10:__ SQL statements to insert data into the `orders` and `shoppers` table is added to the file `load-data.sql`. (Add at least 5 rows in each table)
+- [x] __10:__ SQL statements to insert data into the `orders` and `shoppers` table is added to the file `load-data.sql`. (Add at least 5 rows in each table)
 - [ ] __10:__ All database query functions are written in a file `database.js`, and tests for queries are written in a file `database_test.js`
 - [x] __10:__ Tests can be run with the command `$ npm test`
 
