@@ -21,11 +21,10 @@
   },
   "homepage": "https://github.com/NoCodingGenius/phase-3-challenge#readme",
   "dependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^3.5.3",
     "node-print": "0.0.4",
     "pg-promise": "^6.7.1"
   },
-  "devDependencies": {
-    "chai": "^4.1.2",
-    "moch": "0.0.1"
-  }
+  "devDependencies": {}
 }
