@@ -71,6 +71,10 @@ body {
   padding: 4px;
 }
 
+li a {
+  text-decoration: none;
+}
+
 /* CONTENT */
 .content {
   flex: 1;
