@@ -5,7 +5,9 @@ body {
   font-family: "Lucida Grande", "Helvetica", sans-serif;
 }
 
+
 /* LAYOUT UTILS */
+
 .flex {
   display: -webkit-flex;
   display: flex;
@@ -24,7 +26,9 @@ body {
   flex: 1;
 }
 
+
 /* HEADER */
+
 .site-header {
   flex: 0;
   padding: 4px 0px;
@@ -32,11 +36,11 @@ body {
   background-color: #eee;
 }
 
-.site-header > *:first-child {
+.site-header>*:first-child {
   margin-left: 12px;
 }
 
-.site-header > *:last-child {
+.site-header>*:last-child {
   margin-right: 12px;
 }
 
@@ -48,7 +52,9 @@ body {
   font-size: 20px;
 }
 
+
 /* SIDEBAR */
+
 .sidebar {
   flex: 0 0 20%;
   border-right: solid 1px #ccc;
@@ -75,7 +81,9 @@ li a {
   text-decoration: none;
 }
 
+
 /* CONTENT */
+
 .content {
   flex: 1;
   padding: 4px 0;
@@ -85,7 +93,9 @@ li a {
   padding: 0 12px;
 }
 
+
 /* ITEM LIST */
+
 .item-section {
   list-style-type: none;
   margin: 32px 0 0;
@@ -105,7 +115,7 @@ li a {
   background-color: #eee;
 }
 
-.item > * {
+.item>* {
   font-size: 18px;
   padding: 8px;
 }
@@ -116,4 +126,57 @@ li a {
 
 .item-price {
   flex: 0;
+}
+
+
+/* The Modal (background) */
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+
+/* Modal Content */
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+}
+
+
+/* The Close Button */
+
+.close-modal {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-modal:hover, .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
