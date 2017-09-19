@@ -180,3 +180,8 @@ li a {
   text-decoration: none;
   cursor: pointer;
 }
+
+.modal-item-flex {
+  display: flex;
+  justify-content: space-between;
+}
