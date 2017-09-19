@@ -17,7 +17,7 @@ CREATE TABLE shoppers (
 
 CREATE TABLE orders (
   id SERIAL PRIMARY KEY,
-  shopper_id INTEGER REFERENCES shopper(id)
+  shopper_id INTEGER REFERENCES shoppers(id)
 );
 
 CREATE TABLE order_items (

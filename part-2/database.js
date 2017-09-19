@@ -10,10 +10,10 @@ const queries = {
   shopperOrders: function (id) {
     return db.any(`SELECT orders.id AS order_id, SUM(CAST(grocery_items.price AS DECIMAL)) AS total_cost
       FROM orders
-        INNER JOIN orders_items
-          ON orders_items.orders_id = orders_id
+        INNER JOIN order_items
+          ON order_items.order_id = orders.id
         INNER JOIN grocery_items
-          ON orders_items.item_id = grocery_items
+          ON order_items.item_id = grocery_items.id
         WHERE shopper_id =$1
         GROUP BY orders.id`,
       [id]);
@@ -27,3 +27,5 @@ const queries = {
         GROUP BY shoppers.name`);
   }
 };
+
+module.exports = queries;
