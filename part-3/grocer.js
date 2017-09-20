@@ -2,12 +2,13 @@ const modal = document.getElementsByClassName('modal')[0];
 const openModal = document.getElementById('cart-button');
 const closeModal = document.getElementsByClassName('close-modal')[0];
 const clearModal = document.getElementsByClassName('clear-modal')[0];
-const divContent = document.getElementsByClassName('modal-item-name')[0];
-const div2Content = document.getElementsByClassName('modal-item-price')[0];
+const itemNameDiv = document.getElementsByClassName('modal-item-name')[0];
+const itemPriceDiv = document.getElementsByClassName('modal-item-price')[0];
 const total = document.getElementsByClassName('total')[0];
 
 const addToCartButton = document.getElementsByClassName('add-to-cart');
 const cartItemCount = document.getElementById('cart-item-count');
+
 let itemCount = 0;
 let cartItemNames = [];
 let cartItemPrices = [];
@@ -31,19 +32,19 @@ function addToCart(addToCartButton) {
 
   for (var i = 0; i < cartItemNames.length; i++) {
     divElement.textContent = cartItemNames[i];
-    divContent.appendChild(divElement);
+    itemNameDiv.appendChild(divElement);
   }
 
   let div2Element = document.createElement('div');
 
   for (var i = 0; i < cartItemPrices.length; i++) {
     div2Element.textContent = cartItemPrices[i];
-    div2Content.appendChild(div2Element);
+    itemPriceDiv.appendChild(div2Element);
 
     cartItemPrices[i] = cartItemPrices[i].replace(/\$/g, '');
   }
 
-  var dollarSignRemoved = cartItemPrices.map(Number);
+  let dollarSignRemoved = cartItemPrices.map(Number);
 
   function getSum(total, num) {
     return total + num;
@@ -62,9 +63,9 @@ closeModal.addEventListener('click', function() {
 
 //Clear Cart
 clearModal.addEventListener('click', function() {
-  while (divContent.firstChild && div2Content.firstChild) {
-    divContent.firstChild.remove();
-    div2Content.firstChild.remove();
+  while (itemNameDiv.firstChild && itemPriceDiv.firstChild) {
+    itemNameDiv.firstChild.remove();
+    itemPriceDiv.firstChild.remove();
   }
   itemCount = 0;
   cartItemCount.innerHTML = `(${itemCount})`;
