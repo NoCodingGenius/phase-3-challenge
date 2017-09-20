@@ -84,6 +84,7 @@ response content type: application/json
 - [x] __10:__ All dependencies are specified in a `package.json` file
 - [x] __10:__ Web server can be started with `npm start` command
 - [x] __20:__ GET requests to the `/api/days/:day` route responds with  content type `text/plain`, as described in the example above
+- [x] __20:__ GET requests to the `/api/days/:day` route responds with  content type `text/plain`, as described in the example above
 - [x] __80:__ POST requests to the `/api/array/concat`, concatenates the two arrays provided in the request body and responds with the result. An invalid array should return a 400 response.
 
 ## Part 2: Command Line Grocery Store
