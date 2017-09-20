@@ -19,11 +19,12 @@ app.get('/api/days/:day', function (req, res) {
   const day = req.params.day;
 
   for (let key in daysOfWeek) {
-    if (key === day) {
+    if (!key === day) {
+      res.status(400).send(`${day} is not a valid day!`);
+    } else {
       res.send(String(daysOfWeek[`${day}`]));
-    } 
-  }
-  res.status(400).send(`${day} is not a valid day!`)
+    }
+  };
 });
 
 app.post('/api/array/concat', function (req, res) {
