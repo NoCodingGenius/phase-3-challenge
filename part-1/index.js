@@ -23,7 +23,7 @@ app.get('/api/days/:day', function(req, res) {
       return res.send(String(daysOfWeek[`${day}`]));
     }
   }
-  res.status(400).send(`${day} is not a valid day!`);
+  res.status(400).send(`'${day}' is not a valid day!`);
 });
 
 app.post('/api/array/concat', function(req, res) {
@@ -32,7 +32,7 @@ const array2 = req.body.array2;
 const result = array1.concat(array2);
 
 if (!Array.isArray(array1) || !Array.isArray(array2)) {
-  res.status(400).send({"error": "Input data should be of type Array"});
+  res.status(400).send({"error": "Input data should be of type Array."});
 } else {
   res.send({"result": result});
 }
