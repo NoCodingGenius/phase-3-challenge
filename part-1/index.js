@@ -20,7 +20,7 @@ app.get('/api/days/:day', function(req, res) {
 
   for (let key in daysOfWeek) {
     if (key === day) {
-      return res.send(String(daysOfWeek[`${day}`]));
+      return res.send(`${daysOfWeek[day]}`);
     }
   }
   res.status(400).send(`'${day}' is not a valid day!`);

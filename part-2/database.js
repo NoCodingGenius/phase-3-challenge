@@ -14,7 +14,7 @@ const queries = {
           ON order_items.order_id = orders.id
         INNER JOIN grocery_items
           ON order_items.item_id = grocery_items.id
-        WHERE shopper_id =$1
+        WHERE shopper_id = $1
         GROUP BY orders.id`,
       [id]);
   },
